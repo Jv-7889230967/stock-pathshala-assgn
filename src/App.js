@@ -3,8 +3,10 @@ import { Route, Routes } from 'react-router-dom';
 import Login from './pages/Login';
 import VerifyOtp from './pages/verifyOtp';
 import Home from './pages/Home';
+import useAuthRedirect from './hooks/useAuthentication';
 
 function App() {
+  useAuthRedirect();
   return (
    <Routes>
     <Route path='/' element={<Login/>}/>
