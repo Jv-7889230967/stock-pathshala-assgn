@@ -1,23 +1,14 @@
-import { useState } from "react";
-import CircleLoader from "react-spinners/ClipLoader";
+import Skeleton from '@mui/material/Skeleton';
+import Box from '@mui/material/Box';
 
-const override = {
-    display: "block",
-    margin: "0 auto",
-    borderColor: "red",
-  };
-  
-  export const Loader = ({loading}) => {
-    let [color, setColor] = useState("#ffffff");
-    return (
-        <CircleLoader   
-        color={color}
-        loading={loading}
-        cssOverride={override}
-        size={150}
-        aria-label="Loading Spinner"
-        data-testid="loader"
-      />
-    )
-  }
-  
+const Loader = () => {
+  return (
+    <Box  width={300} marginBottom={2}>
+      <Skeleton variant="rectangular" width={250} height={180} />
+      <Skeleton width={150} />
+      <Skeleton width={150} />
+    </Box>
+  );
+};
+
+export default Loader;

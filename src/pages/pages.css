@@ -1,15 +1,17 @@
-.login-page-container,.otp-page-container
-{
+.login-page-container,
+.otp-page-container,
+.classlist-container {
     height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: #d7d7c1c0;
+    background-color: #fefef7c0;
 }
-.login-page,.otp-page
-{
+
+.login-page,
+.otp-page {
     height: 50%;
     min-height: 300px;
     width: 30%;
@@ -17,16 +19,19 @@
     border: 1px solid black;
     border-radius: 30px;
     border: none;
-    box-shadow: 3px 5px 7px #969693c0;
+    box-shadow:  0px 0px 10px 2px #969693c0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
 }
-h2{
+
+h2 {
     font-size: 25px;
     font-style: italic;
 }
-.login-form{
+
+.login-form {
     height: 80%;
     width: 60%;
     display: flex;
@@ -34,8 +39,9 @@ h2{
     justify-content: space-evenly;
     align-items: center;
 }
-.login-button,.otp-verification-button
-{
+
+.login-button,
+.otp-verification-button {
     height: 40px;
     width: 150px;
     border-radius: 10px;
@@ -43,22 +49,82 @@ h2{
     background-color: rgb(89, 89, 213);
     color: white;
     font-size: 20px;
-    cursor:pointer;
+    cursor: pointer;
 }
-.login-button:hover{
+
+.login-button:hover {
     background-color: rgb(68, 68, 248);
 }
-.error-message{
+
+.error-message {
     margin: 0;
     font-size: small;
     color: red;
 }
-.regenerate-otp-button
-{
+
+.regenerate-otp-button {
     background-color: inherit;
     border: none;
     color: rgb(55, 55, 242);
     font-size: medium;
     font-weight: 500;
     cursor: pointer;
+}
+
+.cards-container {
+    height: 90vh;
+    width: 98vw;
+    overflow-y: auto;
+    border: 1px solid black;
+    display: grid;
+    place-items: center; 
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-rows: 390px;
+    
+}
+
+.class-card {
+    height: 360px;
+    width: 90%;
+    max-width: 320px;
+    border: none;
+    box-shadow: 0px 0px 10px 2px rgb(136, 132, 132);
+    border-radius:15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4px;
+}
+
+p {
+    margin: 0
+}
+/* Scrollbar width */
+.cards-container {
+    scrollbar-width: thin;  /* For Firefox */
+    scrollbar-color: #888 #f1f1f1;  /* For Firefox */
+}
+
+/* Scrollbar track */
+.cards-container::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+/* Track (background of the scrollbar) */
+.cards-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the track */
+}
+
+/* Handle (draggable part of the scrollbar) */
+.cards-container::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar */
+    border-radius: 10px;    /* Round edges */
+    border: 2px solid #f1f1f1; /* Creates padding inside the thumb */
+}
+
+/* Handle on hover */
+.cards-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darken on hover */
 }
