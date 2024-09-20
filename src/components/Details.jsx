@@ -11,13 +11,13 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  height:400,
-  width: 700,
+  height:'75%',
+  width: '70%',  
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
-  
+  overflow: 'auto',
 };
 
 export default function Details({open,handleClose,title,description,link}) {
@@ -49,7 +49,7 @@ let filtereddescription=description.replace("<p>"," ").replace("</p><p>"," ");
             <Typography id="transition-modal-description" sx={{ mt: 2 }}>
               {filtereddescription}
             </Typography>
-            <Button sx={{marginTop:'30px'}} variant='contained' color='success'><a style={{color:'white',textDecoration:'none',fontWeight:'bold',fontSize:'15px'}} href={link}>Visit Class <ArrowOutwardIcon fontSize='small'/></a></Button>
+            <Button sx={{marginTop:'15px'}} variant='contained' color='success'><a style={{color:'white',textDecoration:'none',fontWeight:'bold',fontSize:'15px'}} href={link}>Visit Class <ArrowOutwardIcon fontSize='small'/></a></Button>
           </Box>
         </Fade>
       </Modal>
