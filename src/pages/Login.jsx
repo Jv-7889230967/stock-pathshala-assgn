@@ -26,7 +26,7 @@ const Login = () => {
     }
 
     try {
-      setLoading(true);
+          setLoading(true);
       await generateOTP(username);
       navigate(`/otp-verification/${username}`)
     } catch (error) {
